@@ -1,0 +1,9 @@
+__pycache__/
+env/
+.vscode/
+*db
+source/lib/database/*
+!source/lib/database/models.py
+config.py
+.DS_Store
+lib/datatabase/1.py

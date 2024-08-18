@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col-4"></div>
+
+        <div class="col-4">
+            <h1 align="center">Авторизация</h1>
+                <form action="{{ url_for('user.process_login') }}" method="post">
+                    {{ form.hidden_tag() }}
+                    {{ form.csrf_token }}
+                    <div class="form-group">
+                        {{ form.username.label }}<br>
+                        {{ form.username() }}<br>
+                    </div>
+                    <div class="form-group">
+                        {{ form.password.label }}<br>
+                        {{ form.password() }}<br>
+                    </div>
+                    <div class="form-group form-check">
+                        {{ form.remember_me() }}
+                        {{ form.remember_me.label(class_='form-check-label') }}
+                    </div>
+                    <br>
+    <div class="row">
+        {{ form.submit }}
+    </div>
+    <br>
+    <div class="row">
+        <a class="btn btn-success" href="/users/register" role="button">Зарегистрироваться</a>
+    </div>
+
+
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

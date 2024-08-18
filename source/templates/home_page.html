@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="col-12">
+        <div class="card text-bg-dark">
+            <img src='https://sun9-67.userapi.com/c844721/v844721600/12813f/IOTsEqFrmZY.jpg' class="card-img-top" alt="Горы">
+            <div class="card-img-overlay">
+                <p align="center"><font size="8" color="#000" >Скидки и предложения</font></p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+  <div class="row">
+    {% for product in products %}
+        {% include 'product_card.html' %}
+    {% endfor %}
+  </div>
+{% endblock content%}
