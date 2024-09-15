@@ -3,7 +3,7 @@ env/
 .vscode/
 *db
 source/lib/database/*
+!source/lib/database/faker_db.py
 !source/lib/database/models.py
 config.py
 .DS_Store
-lib/datatabase/1.py
